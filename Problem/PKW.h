@@ -12,6 +12,5 @@ class PKW: public Auto
 	public:
 		PKW(int, string, string, string);
 
-
 		//~PKW();
 };

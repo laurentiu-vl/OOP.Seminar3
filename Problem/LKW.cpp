@@ -5,7 +5,7 @@ LKW::LKW(int id, string marca, string model, double greutate_totala, double denu
 	Auto(id, marca, model) {
 	
 	/*
-	LKW l(0, "marca", "model", 23, 5)
+	LKW LKW1(1, "Ford", "Raptor", 2200, 55)
 	*/
 	
 	Greutate_totala = greutate_totala;
@@ -17,8 +17,14 @@ void LKW::load(double kg)
 	Greutate_totala += kg;
 }
 
-void LKW::unload(double kg) {
+void LKW::unload(double kg) 
+{
 	Greutate_totala -= kg;
+}
+
+int LKW::get_load()
+{
+	return Greutate_totala;
 }
 
 /*LKW::~LKW()

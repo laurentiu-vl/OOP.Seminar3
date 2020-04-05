@@ -6,28 +6,35 @@ using namespace std;
 
 int main()
 {
-    Rental r;
-    Auto a1(1, "abc", "def"), a2(2, "abc", "def"), a3(3, "abc", "def");
-    Kunde k1(1, "Nume"), k2(2, "sugestiv"), k3(3, "123");
-    r.add_auto(a1);
-    r.add_auto(a2);
-    r.add_auto(a3);
-    assert(r.size_auto() == 3);
-    r.add_client(k1);
-    r.add_client(k2);
-    r.add_client(k3);
-    //assert(r.size_clienti() == 3);
-    r.update_client(k1, "brutus");
-    assert(k1.get_name() == "brutus");
-    r.remove_auto(a1);
-    r.remove_auto(a2);
-    r.remove_auto(a3);
-    assert(r.size_auto() == 0);
-    r.delete_client(k1);
-    r.delete_client(k2);
-    r.delete_client(k3);
-    //assert(r.size_clienti() == 0);
+    Rental Rental;
+    Auto Car(1, "Ford", "Raptor"), Car2(2, "BMW", "M4"), Car3(3, "Ford", "Mondeo");
+    LKW LKW1(5, "Ford", "F-150", 1900, 5);
 
+    Kunde Customer(1, "Nume"), Customer2(2, "sugestiv"), Customer3(3, "123");
 
-    cout << "Merge!";
+    Rental.add_auto(Car);
+    Rental.add_auto(Car2);
+    Rental.add_auto(Car3);
+    Rental.add_auto(LKW1);
+    assert(Rental.size_auto() == 4);
+   
+    Rental.add_client(Customer);
+    Rental.add_client(Customer2);
+    Rental.add_client(Customer3);
+    //assert(Rental.size_clienti() == 3);
+    
+    Rental.update_client(Customer, "Andy");
+    assert(Customer.get_name() == "Andy");
+    
+    Rental.remove_auto(Car);
+    Rental.remove_auto(Car2);
+    assert(Rental.size_auto() == 2);
+    
+    Rental.delete_client(Customer);
+    Rental.delete_client(Customer2);
+    //assert(Rental.size_clienti() == 1);
+    
+    LKW1.load(400);
+    assert(LKW1.get_load() == 2300);
+    
 }

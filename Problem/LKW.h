@@ -17,5 +17,7 @@ class LKW: public Auto
 
 		void unload(double);
 
+		int get_load();
+
 		//~LKW();
 };

@@ -9,7 +9,7 @@ Auto::Auto()
 
 Auto::Auto(int id, string marca, string model)
 {
-	Id = 0;
+	Id = id;
 	Marca = marca;
 	Model = model;
 }

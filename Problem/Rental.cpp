@@ -9,6 +9,11 @@ Rental::Rental()
 
 }
 
+int Rental::size_auto()
+{
+	return masini.size();
+}
+
 void Rental::add_client(Kunde client)
 {
 	for (int i = 0; i < clienti.size(); i++)
@@ -60,35 +65,8 @@ void Rental::remove_auto(Auto car)
 	}
 }
 
-int Rental::size_auto()
-{
-	return masini.size();
-}
-
 /*Rental::~Rental()
 {
 
 }
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
